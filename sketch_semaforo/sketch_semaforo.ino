@@ -1,11 +1,14 @@
  
-int tempo1 = 4000;
-int tempo2 = 2000;
+int tempo1;
+int tempo2;
 
 
 
 void setup() {
   // put your setup code here, to run once:
+
+  tempo1 = 4000;
+  tempo2 = 2000;
   
   pinMode(13, OUTPUT); // verde
   pinMode(12, OUTPUT); // giallo
@@ -25,13 +28,13 @@ void loop() {
   digitalWrite(2, HIGH);
   delay(tempo1);
   digitalWrite(13, LOW);
-  digitalWrite(2, LOW);
-  
-  
   digitalWrite(12, HIGH);
+  digitalWrite(2, HIGH);
+  delay(tempo2);
   digitalWrite(3, HIGH);
   delay(tempo2);
   digitalWrite(12, LOW);
+  digitalWrite(2, LOW);
   digitalWrite(3, LOW);
   
   
