@@ -40,7 +40,7 @@ void loop() {
   digitalWrite(3, LOW);
   numlampeggi(13, tempo3);
  
-  delay(tempo1);
+  
   digitalWrite(12, HIGH);
   digitalWrite(3, HIGH);
   delay(tempo2);
