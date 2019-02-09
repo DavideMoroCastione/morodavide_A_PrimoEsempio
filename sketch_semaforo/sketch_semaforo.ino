@@ -1,13 +1,21 @@
 
-int lampeggi = 0;
-int tempolampeggi = 0;
-int tempoverde = 0;
-int tempogiallo = 0;
+// variabili per il funzionamento del codice
+
+int lampeggi;
+int tempolampeggi;
+int tempoverde;
+int tempogiallo;
 
 
 void setup() {
   // put your setup code here, to run once:
 
+  // valori delle variabili
+  
+  lampeggi = 0;
+  tempolampeggi = 0;
+  tempoverde = 0;
+  tempogiallo = 0;
   
   pinMode(13, OUTPUT); // verde
   pinMode(12, OUTPUT); // giallo
@@ -15,10 +23,11 @@ void setup() {
   pinMode(2, OUTPUT); // rosso1
   pinMode(3, OUTPUT); // giallo1
   pinMode(4,OUTPUT); // verde1
-Lampeggi();
-TempoLampeggi();
-TempoVerde();
-TempoGiallo();
+  
+  Lampeggi();
+  TempoLampeggi();
+  TempoVerde();
+  TempoGiallo();
   
 
 }
@@ -61,14 +70,14 @@ void numlampeggi( int b, int c, int x)
   }
 }
 
-void Lampeggi()
+void Lampeggi() // Quanti lampeggi verdi deve fare
 {
   Serial.begin(9600),
   Serial.print( "Quanti lampeggi verdi vuoi?");
   while(Serial.available() == 0) {};
   lampeggi = Serial.readString().toInt();
 }
- void TempoLampeggi()
+ void TempoLampeggi()  //Il tempo che dura ogni lampeggio
 {
   Serial.begin(9600),
   Serial.print( "Quanto durano i lampeggi del verde?");
@@ -78,11 +87,11 @@ void Lampeggi()
 void TempoVerde()
 {
   Serial.begin(9600),
-  Serial.print( "Quanto tempo dura il verde?");
+  Serial.print( "Quanto dura il tempo verde?");
   while(Serial.available() == 0) {};
   tempoverde = Serial.readString().toInt();
 } 
-void TempoGiallo()
+void TempoGiallo() //Il tempo che dura il giallo
 {
   Serial.begin(9600),
   Serial.print( "Quanto tempo dura il giallo?");
