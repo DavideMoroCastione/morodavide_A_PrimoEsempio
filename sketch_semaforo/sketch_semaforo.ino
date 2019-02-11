@@ -37,7 +37,7 @@ void loop() {
   
   digitalWrite(11, HIGH);
   digitalWrite(4, HIGH);
-
+  delay(tempoverde);
   numlampeggi(4, tempolampeggi,lampeggi );
   digitalWrite(12, HIGH);
   digitalWrite(3, HIGH);
@@ -47,6 +47,7 @@ void loop() {
   digitalWrite(13, HIGH);
   digitalWrite(2, HIGH);
   digitalWrite(3, LOW);
+  delay(tempoverde);
   numlampeggi(13, tempolampeggi, lampeggi);
   digitalWrite(12, HIGH);
   digitalWrite(3, HIGH);
